@@ -83,13 +83,28 @@ h1 {
 
 .main-grid .main-item {
   background-color: bisque;
+  background-image: url('harvard.jpg');
   grid-row-start: 1;
   grid-row-end: 3;
+  position: relative;
+}
+
+.main-item h1 {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  left: 30px;
 }
 
 .main-grid .item {
   background-color: aliceblue;
   height: 300px;
+}
+
+.main-item img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .subsite-grid {
