@@ -12,12 +12,14 @@ footer {
 
 header {
   background-color: #a51c30;
+  box-shadow: 5px 5px 35px -5px black;
   display: grid;
-  grid-template-columns: 510px auto;
+  grid-template-columns: 490px auto;
   height: 60px;
-  padding: 0 100px;
+  padding: 0 60px;
   position: relative;
   width: 100%;
+  z-index: 10;
 }
 
 header ul {
@@ -34,15 +36,20 @@ header a {
 header li {
   color: white;
   display: inline;
+  font-size: 14px;
   margin-left: 30px;
 }
 
 header .image {
-  background-color: gray;
+  background-image: url(../images/hlsm-logo.png);
   height: 70px;
   position: absolute;
   top: 10px;
-  width: 70px;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
 }
 
 header .logo {
@@ -53,8 +60,10 @@ header .logo {
 header .logo-title {
   align-self: center;
   color: white;
+  font-family: "Hoefler Text A","Hoefler Text B",serif;
+  font-size: 18px;
   margin: 0;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 a {
@@ -76,9 +85,19 @@ p {
 }
 
 .cover {
-  background-color: lightgray;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,0.6)), url(../images/harvard.jpg);
+  background-size: cover;
   height: 80vh;
+  position: relative;
   width: 100%;
+}
+
+.cover h1 {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 60px;
 }
 
 .horizontal-container {
@@ -147,14 +166,12 @@ p {
 }
 
 .subsite-grid .item {
-  background-color: #efeeeb;
   height: 450px;
   padding: 40px;
+  border-left: 1px solid lightgray;
 }
 
 .subsite-grid .item h4 {
-  border-bottom: 1px solid gray;
-  padding-bottom: 20px;
   margin-bottom: 40px;
 }
 
@@ -167,7 +184,7 @@ p {
 .footer-container {
   color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 20% 60% 20%;
 }
 
 .footer-container .item {
