@@ -80,6 +80,11 @@ h1, h2, h3, h4 {
   font-family: "Hoefler Text A","Hoefler Text B",serif;
   font-weight: bold;
 }
+
+h1 {
+  font-size: 3.5rem;
+}
+
 p {
   font-family: Georgia, serif;
 }
@@ -202,4 +207,11 @@ p {
   width: 30px;
   height: 30px;
   background-size: cover;
+}
+
+
+/* Story View */
+
+.story .cover {
+  height: 60vh;
 }
