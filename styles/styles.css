@@ -191,3 +191,15 @@ p {
   align-self: center;
   justify-self: center;
 }
+
+.footer-container .socials {
+  margin: 0;
+  display: grid;
+}
+
+#linked-in {
+  background-image: url(../images/linked-in-logo.png);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
