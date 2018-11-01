@@ -249,6 +249,14 @@ p {
 
 .profile-container {
   position: relative;
+  display: grid;
+  height: 220px;
+  grid-template-columns: 32% 68%;
+  margin-bottom: 60px;
+}
+
+.profile-container * {
+  margin-bottom: 20px;
 }
 
 .profile-container .img-back-frame {
@@ -260,4 +268,12 @@ p {
   left: 20px;
   top: 20px;
   z-index: 1;
+}
+
+.profile-container .profile-info {
+  grid-column-start: 2;
+}
+
+.profile-container .profile-info h4 {
+  color: #bbbbbb;
 }
