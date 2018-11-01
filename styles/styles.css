@@ -82,7 +82,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 p {
@@ -184,6 +184,23 @@ p {
   max-height: 215px;
 }
 
+/* Sections */
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  display: block;
+  content: '';
+  width: 100px;
+  height: 10px;
+  background-color: rgba(90,90,90,0.15);
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+}
+
 /* Footer */
 
 .footer-container {
@@ -214,4 +231,33 @@ p {
 
 .story .cover {
   height: 60vh;
+}
+
+/* Members */
+
+.members img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+}
+
+.members img::after {
+  content: '';
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-container .img-back-frame {
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border: 3px solid lightgray;
+  left: 20px;
+  top: 20px;
+  z-index: 1;
 }
