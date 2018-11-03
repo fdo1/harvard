@@ -76,7 +76,7 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  margin-bottom: 60px;
+  margin-bottom: 0;
   font-family: "Hoefler Text A","Hoefler Text B",serif;
   font-weight: bold;
 }
@@ -276,4 +276,53 @@ p {
 
 .profile-container .profile-info h4 {
   color: #bbbbbb;
+}
+
+.social-media-icons {
+  list-style: none;
+}
+
+.social-media-icons li img {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.social-media-icons li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profile-cell {
+  width: 300px;
+  height: 500px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-cell img {
+  position: relative;
+  width: 250px;
+}
+
+.profile-cell * {
+  margin-bottom: 20px;
+} 
+
+.profile-cell h4::after {
+  content: '';
+  width: 70%;
+  height: 2px;
+  background-color: #a51c30;
+  display: block;
+  margin-top: 10px;
 }
