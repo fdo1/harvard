@@ -75,7 +75,7 @@ a:hover {
   color: #a51c30;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   margin-bottom: 0;
   font-family: "Hoefler Text A","Hoefler Text B",serif;
   font-weight: bold;
@@ -100,13 +100,17 @@ p {
 .cover h1 {
   color: white;
   position: absolute;
-  bottom: 0;
+  bottom: 80px;
   width: 50%;
   left: 60px;
 }
 
 .horizontal-container {
   padding: 60px 0;
+}
+
+.horizontal-container h1 {
+  margin-bottom: 60px;
 }
 
 /* Grids*/
@@ -184,9 +188,66 @@ p {
   max-height: 215px;
 }
 
+.magazine-grid {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-column-gap: 50px;
+}
+
+.magazine-grid .magazine-item {
+  display: grid;
+  height: 400px;
+  width: 300px;
+  background-color: #efeeeb;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 10px -4px grey;
+}
+
+.magazine-grid .magazine-item h4 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.magazine-grid .magazine-item::after {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  content: '';
+  width: 80%;
+  height: 85%;
+  display: block;
+  align-self: center;
+  border: 1px solid gray;
+  justify-self: center;
+}
+
+.magazine-grid .articles-list {
+  list-style: none;
+}
+
+.articles-list a {
+  text-decoration: none;
+}
+
+.articles-list h4 {
+  color: black;
+}
+
+.articles-list h5 {
+  color: gray;
+}
+
+.articles-list li {
+  margin-bottom: 40px;
+  padding-left: 30px;
+  border-left: 2px solid gray;
+}
+
 /* Sections */
 
 .section-title {
+  margin-bottom: 100px !important;
   position: relative;
 }
 
