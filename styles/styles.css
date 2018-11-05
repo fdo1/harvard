@@ -38,6 +38,7 @@ header li {
   display: inline;
   font-size: 14px;
   margin-left: 30px;
+  font-family: "Whitney SSm A","Whitney SSm B", sans-serif;
 }
 
 header .image {
@@ -66,6 +67,41 @@ header .logo-title {
   margin-left: 90px;
 }
 
+aside {
+  width: 350px;
+  display: block;
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  top: 0;
+  right: -360px;
+  background-color: #a51c30;
+  box-shadow: -5px 5px 15px -3px black;
+  transition: all 0.5s;
+}
+
+aside.shown {
+  right: 0;;
+}
+
+aside ul {
+  list-style: none;
+  margin-top: 60px;
+}
+
+aside li {
+  color: white;
+  padding-left: 50px;
+  margin-bottom: 40px;
+}
+
+aside img {
+  position: absolute;
+  width: 30px;
+  right: 30px;
+  top: 20px;
+}
+
 a {
   color: #a51c30;
   text-decoration: underline;
@@ -87,6 +123,10 @@ h1 {
 
 p {
   font-family: Georgia, serif;
+}
+
+.menu-icon {
+  display: none;
 }
 
 .cover {
@@ -415,9 +455,10 @@ p {
 
 /* MOBILE VIEW  */
 
-@media only screen
+@media (min-width: 320px) and (max-width:991px) {
+/* @media only screen
 and (min-device-width: 320px) 
-and (max-device-width: 991px) {
+and (max-device-width: 991px) { */
   footer {
     height: auto;
   }
@@ -446,5 +487,26 @@ and (max-device-width: 991px) {
 
   .subsite-grid .item {
     height: 300px;
+  }
+}
+
+/*  MOBILE HEADER VIEW  */
+
+@media (max-width:1014px) {
+  header ul {
+    display: none;
+  }
+
+  header {
+    padding: 0 40px 0 60px;
+  }
+
+  .menu-icon {
+    display: block;
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    justify-self: end;
   }
 }
