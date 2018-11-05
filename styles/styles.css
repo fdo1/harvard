@@ -387,3 +387,26 @@ p {
   display: block;
   margin-top: 10px;
 }
+
+/*  Event  */
+
+.event {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-column-gap: 40px;
+}
+
+.event-image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.event-info h1 {
+  margin-bottom: 0;
+}
+
+.event-info h5 {
+  margin-bottom: 60px;
+  color: gray;
+  font-weight: 100;
+}
