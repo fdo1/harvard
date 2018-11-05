@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4em;
 }
 
 p {
@@ -186,6 +186,7 @@ p {
 
 .subsite-grid .item p {
   max-height: 215px;
+  overflow: hidden;
 }
 
 .magazine-grid {
@@ -409,4 +410,41 @@ p {
   margin-bottom: 60px;
   color: gray;
   font-weight: 100;
+}
+
+
+/* MOBILE VIEW  */
+
+@media only screen
+and (min-device-width: 320px) 
+and (max-device-width: 991px) {
+  footer {
+    height: auto;
+  }
+
+  .footer-container {
+    grid-template-columns: 100%;
+    padding: 20px 0;
+  }
+
+  .cover {
+    height: 60vh;
+  }
+  
+  .cover h1 {
+    width: 70%;
+  }
+  .main-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .subsite-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 300px;
+  }
+
+  .subsite-grid .item {
+    height: 300px;
+  }
 }
