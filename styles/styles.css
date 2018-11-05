@@ -238,6 +238,7 @@ p {
   display: grid;
   grid-template-columns: 300px auto;
   grid-column-gap: 50px;
+  margin-bottom: 50px;
 }
 
 .magazine-grid .magazine-item {
@@ -363,6 +364,11 @@ p {
   height: 300px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 30px;
+}
+
+.profile-container:last-child {
+  margin-bottom: 0;
+  border: none;
 }
 
 .profile-container * {
@@ -508,6 +514,18 @@ and (max-device-width: 991px) { */
   .profile-container  .profile-info {
     grid-row-start: 2;
     grid-column-start: 1;
+  }
+
+  .magazine-grid {
+    grid-template-columns: 100%;
+  }
+
+  .event {
+    grid-template-columns: 100%;
+  }
+
+  .event-image img {
+    margin-top: 30px;
   }
 }
 
