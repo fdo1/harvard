@@ -162,6 +162,21 @@ p {
   margin-bottom: 60px;
 }
 
+.more-button {
+  background-color: gray;
+  color: white;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.more-button:hover {
+  background-color: darkgray;
+  color: white;
+  text-decoration: none;
+}
+
 /* Grids*/
 
 .main-grid {
@@ -370,7 +385,7 @@ p {
 .profile-container {
   position: relative;
   display: grid;
-  grid-template-columns: 32% 68%;
+  grid-template-columns: 30% 70%;
   margin-bottom: 40px;
   width: 80%;
   border-bottom: 1px solid lightgray;
@@ -579,5 +594,76 @@ and (max-device-width: 991px) { */
 @media (max-width: 640px) {
   header .logo-title-grid {
     display: none;
+  }
+}
+
+
+/* Image Gallery */
+
+.image-gallery {
+  position: relative;
+}
+
+.image-gallery__thumb {
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.image-gallery__thumb img {
+  height: 350px;
+  object-fit: cover;
+}
+
+.image-gallery__img-container img {
+  cursor: pointer;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.slick-next:before {
+  color: lightgray;
+  font-size: 40px;
+}
+
+.prev-button,
+.next-button {
+  background-color: white;
+  bottom: 20px;
+  border-radius: 100%;
+  box-shadow: -2px 2px 16px 0px grey;
+  cursor: pointer;
+  height: 40px;
+  left: 20px;
+  position: absolute;
+  width: 40px;
+  z-index: 10;
+}
+
+.prev-button:before,
+.next-button:before {
+  color: gainsboro;
+  content: '<';
+  font-size: 25px;
+  left: 13px;
+  position: absolute;
+  top: 1px;
+}
+
+.next-button {
+  left: 80px;
+}
+
+.next-button:before {
+  content: '>';
+}
+
+@media (min-width: 320px) and (max-width:991px) {
+  .image-gallery__thumb {
+    width: 100%;
+  }
+
+  .next-button {
+    left: unset;
+    right: 20px;
   }
 }
