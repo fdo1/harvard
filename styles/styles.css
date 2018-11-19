@@ -14,12 +14,16 @@ footer {
   width: 100%;
 }
 
+footer .logo-title-grid {
+  margin: 0;
+}
+
 header {
   background-color: #a51c30;
   box-shadow: 5px 5px 35px -5px black;
   display: grid;
   grid-template-columns: 490px auto;
-  height: 60px;
+  height: 70px;
   padding: 0 60px;
   position: relative;
   width: 100%;
@@ -57,18 +61,14 @@ header .image {
   padding: 10px;
 }
 
+header .logo-title-grid {
+  margin-left: 90px;
+}
+
+
 header .logo {
   display: grid;
   position: relative;
-}
-
-header .logo-title {
-  align-self: center;
-  color: white;
-  font-family: "Hoefler Text A","Hoefler Text B",serif;
-  font-size: 18px;
-  margin: 0;
-  margin-left: 90px;
 }
 
 aside {
@@ -90,13 +90,17 @@ aside.shown {
 
 aside ul {
   list-style: none;
-  margin-top: 60px;
+  margin: 60px 50px 0 50px;
 }
 
 aside li {
+  border-bottom: 1px solid white;
   color: white;
-  padding-left: 50px;
-  margin-bottom: 40px;
+  padding: 15px 0;
+}
+
+aside li.sidebar-logo {
+  border: none;
 }
 
 aside img {
@@ -213,6 +217,18 @@ p {
   width: 100%;
 }
 
+.logo-title-grid {
+  align-self: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20px 20px 20px;
+}
+
+.logo-title-grid * {
+  margin: 0;
+}
+
 .subsite-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -314,7 +330,7 @@ p {
 .footer-container {
   color: white;
   display: grid;
-  grid-template-columns: 20% 60% 20%;
+  grid-template-columns: auto auto auto;
 }
 
 .footer-container .item {
@@ -351,17 +367,12 @@ p {
   z-index: 2;
 }
 
-.members img::after {
-  content: '';
-}
-
 .profile-container {
   position: relative;
   display: grid;
   grid-template-columns: 32% 68%;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   width: 80%;
-  height: 300px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 30px;
 }
@@ -372,7 +383,7 @@ p {
 }
 
 .profile-container * {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .profile-container .img-back-frame {
@@ -381,8 +392,8 @@ p {
   height: 200px;
   position: absolute;
   border: 3px solid lightgray;
-  left: 20px;
-  top: 20px;
+  left: 15px;
+  top: 15px;
   z-index: 1;
 }
 
@@ -478,16 +489,24 @@ and (max-device-width: 991px) { */
     height: auto;
   }
 
+  h1 {
+    font-size: 40px;
+  }
+
   .footer-container {
     grid-template-columns: 100%;
-    padding: 20px 0;
+    grid-row-gap: 10px;
+    padding: 20px 20px;
+    text-align: center;
   }
 
   .cover {
-    height: 60vh;
+    height: 75vh;
   }
   
   .cover h1 {
+    bottom: 20px;
+    left: 20px;
     width: 70%;
   }
   .main-grid {
@@ -497,11 +516,11 @@ and (max-device-width: 991px) { */
 
   .subsite-grid {
     grid-template-columns: 100%;
-    grid-template-rows: 300px;
+    grid-template-rows: auto;
   }
 
   .subsite-grid .item {
-    height: 300px;
+    height: auto;
   }
 
   .profile-container {
@@ -531,16 +550,22 @@ and (max-device-width: 991px) { */
 
 /*  MOBILE HEADER VIEW  */
 
-@media (max-width:1014px) {
+@media (max-width:1090px) {
   header ul {
     display: none;
   }
 
   header {
-    padding: 0 40px 0 60px;
+    padding: 0 30px;
+    grid-template-columns: auto auto;
+  }
+
+  header .image {
+    width: 65px;
   }
 
   #menu-icon {
+    cursor: pointer;
     display: block;
     object-fit: cover;
     width: 30px;
@@ -548,5 +573,11 @@ and (max-device-width: 991px) { */
     align-self: center;
     justify-self: end;
     position: relative;
+  }
+}
+
+@media (max-width: 640px) {
+  header .logo-title-grid {
+    display: none;
   }
 }
