@@ -2,47 +2,39 @@ $(document).ready(function(){
   console.log('Js ready');
 
   $('#menu-icon').on('click', function(){
-    console.log('clicked');
+    console.log('Menu clicked');
     $('aside').addClass('shown');
+    $('aside').find('li').not('.sidebar-logo').each(function(index){
+      console.log('Resetting');
+      var gridItem = $(this);
+      window.setTimeout(function(){
+        gridItem.addClass('animated fadeInRight fast');
+      }, 100 * index);
+    });
   });
 
-  $('.close-icon').on('click', function(){
+  $('.close-icon').on('click', function(event){
+    $('aside').find('li').removeClass('animated fadeInRight fast');
     $('aside').removeClass('shown');
   });
 
-  // Slick initialization
+  $(window).scroll(function(){
+    if($(this).scrollTop() >= $('.cover').offset().top + $('.cover').outerHeight() - 200) {
+      $('.main-grid').children().each(function(index){
+        var gridItem = $(this);
+        window.setInterval(function(){
+          gridItem.addClass('animated fadeInUp fast');
+        }, 500 * index);
+      });
+    }
 
-  $('.image-gallery__thumb').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.image-gallery__img-container'
+    if ($(this).scrollTop() >= $('#articles-title').offset().top -200) {
+      $('.subsite-grid').children().each(function(index){
+        var gridItem = $(this);
+        window.setInterval(function(){
+          gridItem.addClass('animated fadeInRight fast');
+        }, 500 * index);
+      });
+    }
   });
-
-  $('.image-gallery__img-container').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: '.image-gallery__thumb',
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-    variableWidth: false,
-    adaptiveHeight: false,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 5
-        }
-      }
-    ],
-    prevArrow: $('.prev-button'),
-    nextArrow: $('.next-button')
-  });
-
-  $('.image-gallery__img-container').on('afterChange', function(){
-    $(this).find('img').css('width', '150px');
-  })
 })

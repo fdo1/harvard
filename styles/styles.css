@@ -93,9 +93,10 @@ aside ul {
   margin: 60px 50px 0 50px;
 }
 
-aside li {
+aside li:not(.sidebar-logo) {
   border-bottom: 1px solid white;
   color: white;
+  opacity: 0;
   padding: 15px 0;
 }
 
@@ -194,6 +195,10 @@ p {
   position: relative;
 }
 
+.main-grid > * {
+  opacity: 0;
+}
+
 .main-item h1 {
   position: absolute;
   bottom: 60px;
@@ -251,9 +256,10 @@ p {
 }
 
 .subsite-grid .item {
-  height: 450px;
-  padding: 40px;
   border-left: 1px solid lightgray;
+  height: 450px;
+  opacity: 0;
+  padding: 40px;
 }
 
 .subsite-grid .item h4 {
